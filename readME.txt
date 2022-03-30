@@ -1,0 +1,3 @@
+ The EIGamal Encryption algorithm method’s sole concept is to make it nearly impossible to calculate the encryption approach even if certain important information is known to the attacker. It is mainly concerned about the difficulty of leveraging the cyclic group to find the discrete logarithm.
+
+With this, the program allows the user to enter a message, shows the g^a, g^k, and g^ak ciphers and then decrypts the original message.
