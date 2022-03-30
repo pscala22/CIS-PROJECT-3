@@ -1,3 +1,7 @@
+#Paul Scala
+#CIS5371
+#PROJECT #3
+#March 29th 2021
 import random
 from math import pow
 
@@ -11,7 +15,7 @@ def gcd(a, b):
    else:
        return gcd(b, a % b)
 
-# Generating large random numbers
+#Creating large random numbers
 def gen_key(q):
 
    key = random.randint(pow(10, 20), q)
@@ -20,7 +24,7 @@ def gen_key(q):
 
    return key
 
-# Modular exponentiation
+#Modular exponentiation (square and multiply)
 def power(a, b, c):
    x = 1
    y = a
@@ -33,12 +37,12 @@ def power(a, b, c):
 
    return x % c
 
-# Asymmetric encryption
+#Asymmetric encryption
 def encrypt(msg, q, h, g):
 
    en_msg = []
 
-   k = gen_key(q)# Private key for sender
+   k = gen_key(q)#Private key for sender
    s = power(h, k, q)
    p = power(g, k, q)
   
@@ -52,6 +56,7 @@ def encrypt(msg, q, h, g):
 
    return en_msg, p
 
+#Decryption
 def decrypt(en_msg, p, key, q):
 
    dr_msg = []
@@ -61,7 +66,7 @@ def decrypt(en_msg, p, key, q):
       
    return dr_msg
 
-# Driver code
+#Driver code
 def main():
 
    msg = input("Type something to encrypt: ")
@@ -70,7 +75,7 @@ def main():
    q = random.randint(pow(10, 20), pow(10, 50))
    g = random.randint(2, q)
 
-   key = gen_key(q)# Private key for receiver
+   key = gen_key(q)#Private key for receiver
    h = power(g, key, q)
    print("g used : ", g)
    print("g^a used : ", h)
@@ -83,3 +88,12 @@ def main():
 
 if __name__ == '__main__':
    main()
+
+while True:
+ 
+    number = g
+    
+    ''' break the loop if recived 0 '''
+    if number == 0:
+        break
+    
