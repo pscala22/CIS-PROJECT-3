@@ -88,12 +88,3 @@ def main():
 
 if __name__ == '__main__':
    main()
-
-while True:
- 
-    number = g
-    
-    ''' break the loop if recived 0 '''
-    if number == 0:
-        break
-    
